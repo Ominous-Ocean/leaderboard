@@ -6,7 +6,7 @@ app.get("/", (req, res) => {
     res.send("<h1>Hey... You're not meant to be here!")
 });
 
-app.get(["/add", "/add/:player:score"], (req, res) => {
+app.get(["/add", "/add/:player/:score"], (req, res) => {
     player = req.params["player"];
     score = req.params["score"];
     if (player && score) {
