@@ -6,10 +6,10 @@ app.get("/", (req, res) => {
     res.send("<h1>Hey... You're not meant to be here!")
 });
 
-app.get(["/add", "/add:player:score"], (req, res) => {
+app.get(["/add", "/add:player"], (req, res) => {
     player = req.params["player"];
-    score = req.params["score"];
-    if (player && score) {
+    // score = req.params["score"];
+    if (player) {
         res.send(player + ' and ' + score);
     } else {
         res.send("<h1>Try some arguments...");
