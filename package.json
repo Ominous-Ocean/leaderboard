@@ -1,0 +1,9 @@
+{
+  "name": "ominous-ocean-leaderboard",
+  "version": "1.0.0",
+  "description": "The learderboard for Ominous Ocean",
+  "main": "index.js",
+  "repository": "https://github.com/Ominous-Ocean/leaderboard",
+  "author": "AwesomeKalin and Footballcool577",
+  "license": "GNUv3"
+}
