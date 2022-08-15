@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/Ominous-Ocean/leaderboard",
   "author": "AwesomeKalin and Footballcool577",
-  "license": "GNUv3"
+  "license": "GNUv3",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
