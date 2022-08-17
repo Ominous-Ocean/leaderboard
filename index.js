@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 app.get(["/add", "/add/:player/:score"], (req, res) => {
     player = req.params["player"];
     score = req.params["score"];
-    if(!isNaN(score)) {
+    if(isNaN(score)) {
         res.send("2");
     }
     if (player && score) {
