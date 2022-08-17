@@ -20,7 +20,7 @@ app.get(["/add", "/add/:player/:score"], (req, res) => {
             place += 1
             if(!fs.existsSync('/leaderboard/' + place + '.json')) {
                 password = bcrypt.genSaltSync(25);
-                pwHashed = bcrypt.hashSync(password);
+                pwHashed = bcrypt.hashSync(password, password);
                 let fileToSend = {
                     player: player,
                     score: score,
