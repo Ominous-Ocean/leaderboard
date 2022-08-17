@@ -4,7 +4,7 @@ const port = 8080;
 const fs = require('fs');
 
 app.get("/", (req, res) => {
-    res.send("<h1>Hey... You're not meant to be here!")
+    res.send("Error Code 1: Trying to add to leaderboard without providing player name and/or score\nError Code 2: Tried to provide a score that wasn't a number\nError Code 3: Failed to read file on server side");
 });
 
 app.get(["/add", "/add/:player/:score"], (req, res) => {
@@ -17,7 +17,11 @@ app.get(["/add", "/add/:player/:score"], (req, res) => {
         place = 0;
         while (place <= 1000) {
             place += 1
-            
+            if(!fs.existsSync('/leaderboard/' + place + '.json')) {
+                res.send('3')
+            }
+            let leaderboardPosJson = fs.readFileSync('/leaderboard/' + place + '.json');
+
         }
         res.send(player + ' and ' + score);
     } else {
