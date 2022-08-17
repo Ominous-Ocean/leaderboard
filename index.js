@@ -29,6 +29,8 @@ app.get(["/add", "/add/:player/:score"], (req, res) => {
                     score: score,
                     privateDeleteKey: pwHashed
                 };
+                let data = JSON.stringify(fileToSave);
+                fs.writeFileSync('/leaderboard/' + place + '.json', data)
                 console.log("Score submitted and saved. Player name: " + player + '. Score: ' + score + '. Place: ' + place);
                 res.send(password);
                 return 0;
